@@ -1,0 +1,20 @@
+<div>
+	<div id="project_{{name}}">{{name}}</div>
+	<ul id="users">
+	{{#users}}
+		<li id="user_{{user}}">{{user}}</li>
+	{{/users}}
+	</ul>
+	<ul id="tasklists">
+		{{#tasklists}}
+		<li>
+			<div id="list_{{name}}">{{name}}</div>
+			<ul id="tasks">
+			{{#tasks}}
+				<li id="task_{{name}}">{{name}}</li>
+			{{/tasks}}
+			</ul>
+		</li>
+		{{/tasklists}}
+	</ul>
+</div>

@@ -1,0 +1,24 @@
+{
+	"docs": [
+		{
+			"_id":"project1",
+			"type":"project",
+			"users":["stenno"],
+			"tasklists":["task1","task2"]
+		},
+		{	
+			"_id":"stenno",
+			"type":"user"
+		},
+		{
+			"_id":"task1",
+			"users":["stenno"]
+		},
+		{
+			"_id":"task2",
+			"users":["stenno"]
+		}
+	]
+}
+			
+	
