@@ -1,3 +1,4 @@
 function() {
-	$(this).trigger("desktop", []);
+	var widget = $$(this);
+	widget.trigger("desktop", []);
 }
