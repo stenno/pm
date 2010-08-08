@@ -6,17 +6,12 @@
   </head>
   <body>
 	<div id="menu"></div>
-    <div id="account"></div>
-
-    <h1>Generated CouchApp</h1>
-
-    <div id="profile"></div>
+    	<div id="account"></div>
 	<div id="projects"></div>
-    <div id="items"></div>
-    <div id="sidebar">
-      <p>Edit welcome message.</p>
-      <p>Ideas: You could easily turn this into a photo sharing app, or a grocery list, or a chat room.</p>
-    </div>
+	<div id="sidebar">
+	      <p>Edit welcome message.</p>
+	      <p>Ideas: You could easily turn this into a photo sharing app, or a grocery list, or a chat room.</p>
+	</div>
   </body>
   <script src="vendor/couchapp/loader.js"></script>
   <script type="text/javascript" charset="utf-8">
@@ -26,6 +21,7 @@
 		$.evently.connect("#account", "#projects", ["loggedIn"]);
 		$("#menu").evently("menu",app);
 		$.evently.connect("#account", "#menu", ["loggedIn"]);
+		$.evently.connect("#menu","#projects", ["desktop"]);
 	});
   </script>
 </html>

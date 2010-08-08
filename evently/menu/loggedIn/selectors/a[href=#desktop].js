@@ -1,3 +1,3 @@
 function() {
-	$$(this).trigger("loggedIn",[]);
+	$(this).trigger("desktop", []);
 }
