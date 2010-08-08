@@ -1,5 +1,6 @@
 function(data) {
+	var name = $$("#account").userCtx.name;
 	return { 
-		username:data.rows[0].key
+		username:username
 	};
 }
