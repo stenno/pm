@@ -1,6 +1,14 @@
 <div>Hello {{username}}</div>
-<ul>
-{{!#projects}}
-	<!--<li><a href="#project_link" class="project" id="{{name}}">{{name}}</a></li> -->
-{{!/projects}}
-</ul>
+<div id="project_list">
+	{{#projects}}
+			<div class="project">
+				{{#project}}
+					HEY: {{_id}}!
+				{{/project}}
+				{{^project}}
+					No project exists :/
+				{{/project}}
+			</div>
+			
+	{{/projects}}
+</div>

@@ -1,6 +1,15 @@
 function(data) {
-	var name = $$("#account").userCtx.name;
+	var username = $$("#account").userCtx.name;
+	var project;
+	var projects = data.rows.map(function(row) { 
+		project = row.doc;
+		if (project)
+			return {project:project};
+		else
+			return {};
+	});
 	return { 
-		username:username
+		username:username,
+		projects:projects
 	};
-}
+};
