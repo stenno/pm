@@ -7,24 +7,22 @@
   <body>
 	<div id="menu"></div>
     	<div id="account"></div>
-	<div id="projects"></div>
+	<div id="desktop"></div>
 	<div id="sidebar">
-	      <p>Edit welcome message.</p>
-	      <p>Ideas: You could easily turn this into a photo sharing app, or a grocery list, or a chat room.</p>
 	</div>
   </body>
   <script src="vendor/couchapp/loader.js"></script>
   <script type="text/javascript" charset="utf-8">
-	$("a.toggle_project").click(function() {
-		$("../div[@class=project_data]").toggle();
+	$("a.toggle").click(function() {
+		$("#project_data").toggle();
 	});
 	$.couch.app(function(app) {
       		$("#account").evently("account", app);
-		$("#projects").evently("projects", app);
-		$.evently.connect("#account", "#projects", ["loggedIn"]);
-	//	$("#menu").evently("menu",app);
-	//	$.evently.connect("#account", "#menu", ["loggedIn"]);
-		$.evently.connect("#menu","#projects", ["desktop"]);
+		$("#desktop").evently("desktop", app);
+		$("#project").evently("project", app);
+		
+		$.evently.connect("#account", "#desktop", ["loggedIn"]);
+		$.evently.connect("#desktop", "projects", ["showProject"]);
 	});
   </script>
 </html>
