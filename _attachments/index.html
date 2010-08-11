@@ -7,22 +7,19 @@
   <body>
 	<div id="menu"></div>
     	<div id="account"></div>
-	<div id="desktop"></div>
-	<div id="sidebar">
-	</div>
+	<div id="desktop">Nothing loaded yet</div>
+	<div id="project"></div>
+	<div id="sidebar"></div>
   </body>
   <script src="vendor/couchapp/loader.js"></script>
   <script type="text/javascript" charset="utf-8">
-	$("a.toggle").click(function() {
-		$("#project_data").toggle();
-	});
 	$.couch.app(function(app) {
       		$("#account").evently("account", app);
 		$("#desktop").evently("desktop", app);
-		$("#project").evently("project", app);
+		$("#project").evently("projects", app);
 		
 		$.evently.connect("#account", "#desktop", ["loggedIn"]);
-		$.evently.connect("#desktop", "projects", ["showProject"]);
+		$.evently.connect("#desktop", "#project", ["showProject"]);
 	});
   </script>
 </html>

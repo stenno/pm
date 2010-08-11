@@ -1,4 +1,4 @@
-function(e, data) {
+function(data) {
 	if (data.users) {
 		var users = data.users.map(function(user) { return {user:user};});
 	}

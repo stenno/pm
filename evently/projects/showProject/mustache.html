@@ -1,1 +1,21 @@
-<div>this won't change <em>{{#project}}{{name}}{{/project}}</em></div>
+<div id="project_menu"></div>
+<div id="project_name">{{name}}</div>
+Users:
+<ul id="users_list">
+	{{#users}}
+		<li class="user" id="user_{{user}}">{{user}}</li>
+	{{/users}}
+</ul>
+Tasks:
+<ul id="task_list">
+{{#tasklists}}
+	<li class="tasklist">{{name}}</li>
+	Tasks:
+	<ul>
+	{{#tasks}}
+		<li>{{name}}</li>
+	{{/tasks}}
+	</ul>
+{{/tasklists}}
+</ul>
+

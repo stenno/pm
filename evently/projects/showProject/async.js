@@ -1,4 +1,3 @@
-function(cb,e, params) {
-	$.log(JSON.stringify(params));
-	$$(this).app.db.openDoc(params, { success:function(doc){cb(e,doc);}});
+function(cb, e, project_id) {
+	$$(this).app.db.openDoc(project_id, { success:function(doc){cb(doc);}});
 } 
