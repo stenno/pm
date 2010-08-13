@@ -58,7 +58,13 @@ div.avatar {
   height : 60px;
   text-align: center;
 }
-
+a.menuitem {
+	border:2px solid #ffffff;
+	float:left;
+}
+div#desktop {
+	clear:both;
+}
 div.avatar .name {
   padding-top:2px;
 }

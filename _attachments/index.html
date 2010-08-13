@@ -8,7 +8,7 @@
 	<div id="menu"></div>
     	<div id="account"></div>
 	<div id="desktop">Nothing loaded yet</div>
-	<div id="project"></div>
+	<div id="projects"></div>
 	<div id="sidebar"></div>
   </body>
   <script src="vendor/couchapp/loader.js"></script>
@@ -16,10 +16,15 @@
 	$.couch.app(function(app) {
       		$("#account").evently("account", app);
 		$("#desktop").evently("desktop", app);
-		$("#project").evently("projects", app);
-		
+		$("#projects").evently("projects", app);
+		$("#menu").evently("menu", app);
 		$.evently.connect("#account", "#desktop", ["loggedIn"]);
-		$.evently.connect("#desktop", "#project", ["showProject"]);
+		$.evently.connect("#menu", "#desktop", ["menuClick"]);
+		$.evently.connect("#menu", "#projects", ["menuClick"]);
+
+		$.evently.connect("#desktop", "#projects", ["showProject"]);
+		
+
 	});
   </script>
 </html>

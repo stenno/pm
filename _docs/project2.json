@@ -1,0 +1,14 @@
+{
+	"_id":"project2",
+	"type":"project",
+	"users":["stenno","other"],
+	"tasklists": [
+		{
+			"name":"important",
+			"tasks":[
+				{"name":"important1"},
+				{"name":"important2"}
+			]
+		}
+	]
+}

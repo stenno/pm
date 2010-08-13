@@ -1,0 +1,13 @@
+{
+	"_id":"project3",
+	"type":"project",
+	"users":["other"],
+	"tasklists": [
+		{
+			"name":"another_list",
+			"tasks": [
+				{"name":"yet_another_task"}
+			]
+		}
+	]
+}
